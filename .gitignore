@@ -18,3 +18,5 @@ readme\.rst
 /application/config/constants.php
 
 /application/config/database.php
+
+\.DS_Store
