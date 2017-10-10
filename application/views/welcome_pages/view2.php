@@ -1,14 +1,43 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 
-<p>The final countdown:</p>
-<span class="days"></span>d
-<span class="hours"></span>h
-<span class="mins"></span>m
-<span class="sec"></span>s
-
+<div class="jumbotron">
+<p style="text-align: center;">The final countdown:</p>
+<div class="row" style="margin: 0 20rem;">
+  <div class="col-sm-3">
+    <div class="card text-center text-white bg-dark" style="max-width: 10rem;">
+      <div class="card-body">
+  			<span class="days card-text"></span>d
+	  </div>
+	</div>
+  </div>
+  <div class="col-sm-3">
+    <div class="card text-center text-white bg-dark" style="max-width: 10rem;">
+      <div class="card-body">
+  			<span class="hours card-text"></span>h
+	  </div>
+	</div>
+  </div>
+  <div class="col-sm-3">
+    <div class="card text-center text-white bg-dark" style="max-width: 10rem;">
+      <div class="card-body">
+  			<span class="mins card-text"></span>m
+	  </div>
+	</div>
+  </div>
+  <div class="col-sm-3">
+    <div class="card text-center text-white bg-dark" style="max-width: 10rem;">
+      <div class="card-body">
+  			<span class="sec card-text"></span>s
+	  </div>
+	</div>
+  </div>
+</div>
+</div>
 
 <script type="text/javascript">
+
 	var time_diff = <?= $time_diff ?>;
+
 	function pad(str){
 		str = str.toString();
 		if(str.length > 1){
@@ -16,6 +45,7 @@
 		}
 		return '0' + str;
 	}
+
 	function toDate(){
 		if(time_diff == 0){
 			console.log('Time is up!');
